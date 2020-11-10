@@ -1,0 +1,82 @@
+{% extends 'film/base.html' %}
+{% block mainbody %}
+    <div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+<div class="fed-part-layout fed-back-whits">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">
+			搜索到与&nbsp;“<span class="fed-list-keys fed-text-green fed-text-bold">{{ key }}</span>”&nbsp;相关的&nbsp;“<span id="fed-count" class="fed-list-sums fed-text-green fed-text-bold">{{ page.paginator.count }}</span>”&nbsp;条结果
+		</h2>
+		<ul class="fed-part-tips fed-padding">
+			<li><span class="fed-more fed-hide-xs">当前第&nbsp;<span id="fed-now" class="fed-text-green fed-text-bold">{{ page.number }}</span>&nbsp;页</span></li>
+		</ul>
+	</div>
+    {% for m in page %}
+		<dl class="fed-deta-info fed-deta-padding fed-line-top fed-margin fed-part-rows fed-part-over">
+	<dt class="fed-deta-images fed-list-info fed-col-xs3">
+		<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+			<span class="fed-list-play fed-hide-xs"></span>
+						<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+						<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+		</a>
+	</dt>
+	<dd class="fed-deta-content fed-col-xs7 fed-col-sm8 fed-col-md10">
+		<h1 class="fed-part-eone fed-font-xvi"><a href="/film/detail/?name={{ m.nameMd5 }}">{{ m.name }}</a></h1>
+		<ul class="fed-part-rows">
+			<li class="fed-col-xs12 fed-col-md6 fed-part-eone"><span class="fed-text-muted">主演：</span>{{ m.star}}</li>
+			<li class="fed-col-xs12 fed-col-md6 fed-part-eone"><span class="fed-text-muted">导演：</span>{{ m.director }}</li>
+			<li class="fed-col-xs6 fed-col-md3 fed-part-eone"><span class="fed-text-muted">分类：</span>{{ m.type }}</li>
+			<li class="fed-col-xs6 fed-col-md3 fed-part-eone"><span class="fed-text-muted">地区：</span>{{ m.region }}</li>
+			<li class="fed-col-xs6 fed-col-md3 fed-part-eone"><span class="fed-text-muted">年份：</span>{{ m.issueTime }}</li>
+			<li class="fed-col-xs6 fed-col-md3 fed-part-eone"><span class="fed-text-muted">更新：</span>{{ m.updateTime }}</li>
+			<li class="fed-col-xs12 fed-hide fed-show-md-block">
+				<div class="fed-part-esan">
+					<span class="fed-text-muted">简介：</span>{{ m.details }}</div>
+			</li>
+		</ul>
+	</dd>
+	<dd class="fed-deta-button fed-col-xs7 fed-col-sm8 fed-part-rows">
+		<a class="fed-deta-play fed-rims-info fed-btns-info fed-btns-green fed-col-xs4" href="/film/detail/?name={{ m.nameMd5 }}">查看详情</a>
+	</dd>
+		</dl>
+    {% endfor %}
+    <div class="fed-page-info fed-text-center">
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/film/search/?k={{ key }}&page=1">首页</a>
+    {% if page.has_previous %}
+	    <a class="fed-btns-info fed-rims-info" href="/film/search/?k={{ key }}&page={{ page.previous_page_number }}">上页</a>
+        {% if page.number != 2 %}
+            <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/search/?k={{ key }}&page=1">1</a>
+        {% endif %}
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">上页</a>
+    {% endif %}
+    {% if page.number > 3 %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_previous %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/search/?k={{ key }}&page={{ page.previous_page_number }}">{{ page.previous_page_number }}</a>
+    {% endif %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-green" href="javascript:;">{{ page.number }}</a>
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{{ page.number }}/{{ page.paginator.num_pages }}</a>
+    {% if page.has_next %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/search/?k={{ key }}&page={{ page.next_page_number }}">{{ page.next_page_number }}</a>
+    {% endif %}
+    {% if page.number < page.paginator.num_pages|add:-2 %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_next %}
+        {% if page.number != page.paginator.num_pages|add:-1 %}
+           <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/search/?k={{ key }}&page={{ page.paginator.num_pages }}">{{ page.paginator.num_pages }}</a>
+	    {% endif %}
+	    <a class="fed-btns-info fed-rims-info" href="/film/search/?k={{ key }}&page={{ page.next_page_number }}">下页</a>
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">下页</a>
+    {% endif %}
+	<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/film/search/?k={{ key }}&page={{ page.paginator.num_pages }}">尾页</a>
+		<input class="fed-rims-info" id="page" type="text" placeholder="输入页码" autocomplete="off">
+    <a class="fed-btns-info fed-rims-info fed-page-jump" data-url="/film/search/?k={{ key }}&page=" data-total="{{ page.paginator.num_pages }}" data-sp="_" >跳转</a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

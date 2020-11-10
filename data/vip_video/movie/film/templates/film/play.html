@@ -1,0 +1,84 @@
+{% extends 'film/base.html' %}
+{% block mainbody %}
+<div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+<div class="fed-play-info fed-part-rows fed-back-whits fed-marg-top">
+	<div class="fed-play-player fed-rage-head fed-part-rows fed-back-black" style="padding-top:56.25%">
+		<style type="text/css">@media(max-width:47.9375rem){.fed-play-player{padding-top:56.25%!important}}</style>
+		<div class="fed-play-loader fed-part-full"><span class="fed-part-core fed-font-xvi fed-text-white fed-text-center">正在加载...</span></div>
+		<iframe id="fed-play-iframe" class="fed-play-iframe fed-part-full" frameborder="0" scrolling="no" allowfullscreen="true" src="{{ episode.episodeUrl }}"></iframe>
+{#				<div class="fed-play-confirm1 fed-back-black fed-play-pays fed-play-box fed-back-whits fed-event fed-hidden">#}
+{#			<div class="fed-part-core">#}
+{#								<h2 class="fed-text-center fed-font-xvi">				试看5分钟结束，完整观看本影片需要升级会员组，请升级后观看。</h2>#}
+{#				<p class="fed-text-center">提示：购买VIP会员组，享受超级权限，谢谢支持。</p>#}
+{#				<div class="fed-text-center">#}
+{#										<a class="fed-btns-info fed-rims-info fed-visible fed-padding fed-margin" href="/user/reg.html">用户注册</a>#}
+{#					<a class="fed-btns-info fed-rims-info fed-visible fed-padding fed-margin fed-back-green fed-navs-login" href="javascript:;">立即登录</a>#}
+{#									</div>#}
+{#            				</div>#}
+{#		</div>#}
+	</div>
+	<div class="fed-play-title fed-part-rows">
+				<ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+			<li class="fed-padding fed-col-xs12">
+				<span class="fed-play-text fed-visible fed-font-xvi fed-part-eone">{{ episode.name }}</span>
+			</li>
+					</ul>
+		<ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+						<li class="fed-padding fed-col-xs2">
+				<a class="fed-btns-info fed-rims-info fed-visible fed-play-favo fed-event" href="javascript:;">收藏</a>
+			</li>
+						<li class="fed-padding fed-col-xs2">
+				<a class="fed-btns-info fed-rims-info fed-visible fed-play-reno fed-event" href="javascript:;" onclick="location.reload()">刷新</a>
+			</li>
+						<li class="fed-padding fed-col-xs2">
+				<a class="fed-btns-info fed-rims-info fed-visible fed-play-share fed-event" href="javascript:;">分享</a>
+			</li>
+						<li class="fed-padding fed-col-xs3 fed-col-xs2">
+				<a class="fed-btns-info fed-rims-info fed-visible fed-play-prev {% if episode_previous == "" %}fed-btns-disad {% endif %}" href="/film/play/?name={{ episode.nameMd5 }}&episode={{ episode_previous }}">上集</a>
+			</li>
+			<li class="fed-padding fed-col-xs3 fed-col-xs2">
+				<a class="fed-btns-info fed-rims-info fed-visible fed-play-next {% if episode_next == "" %}fed-btns-disad {% endif %}" href="/film/play/?name={{ episode.nameMd5 }}&episode={{ episode_next }}">下集</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="fed-tabs-info  fed-rage-foot fed-part-rows fed-part-layout fed-back-whits fed-play-data" data-name="" data-nums="" data-show="VIP线路①">
+	<ul class="fed-list-head fed-part-rows fed-padding">
+				<li class="fed-tabs-btns fed-part-curs fed-font-xvi fed-mart-v fed-text-green" href="javascript:;">播放列表</li>
+{#				<li class="fed-tabs-btns fed-part-curs fed-font-xvi fed-mart-v" href="javascript:;">剧情简介</li>#}
+{#				<li class="fed-tabs-btns fed-part-curs fed-font-xvi fed-mart-v" href="javascript:;">发表评论</li>#}
+				<li class="fed-part-tips fed-padding"><a class="fed-tabs-errs fed-event fed-more" href="javascript:;" data-href="/gbook/report.html">报错</a></li>
+	</ul>
+	<div class="fed-tabs-boxs">
+				<div class="fed-tabs-item fed-drop-info fed-visible">
+{#			<div class="fed-drop-boxs fed-drop-tops fed-matp-v">#}
+{#				<ul class="fed-part-rows">#}
+{#										<li class="fed-play-btns fed-drop-btns fed-padding fed-col-xs3 fed-col-md2">#}
+{#						<a class="fed-btns-info fed-rims-info fed-part-eone fed-back-green" href="javascript:;">VIP线路①</a>#}
+{#					</li>#}
+{#									</ul>#}
+{#			</div>#}
+			<div class="fed-drop-boxs fed-drop-btms fed-matp-v">
+								<div class="fed-play-item fed-drop-item fed-visible">
+					<ul class="fed-drop-head fed-padding fed-part-rows">
+						<li class="fed-padding fed-col-xs4 fed-part-eone fed-font-xvi">播放集数</li>
+{#						<li class="fed-padding fed-col-xs8 fed-part-eone fed-font-xvi fed-text-right">#}
+{#							<a class="fed-drop-sort fed-back-green" href="javascript:;">视频排序：正序</a>#}
+{#						</li>#}
+					</ul>
+					<ul class="fed-part-rows">
+                        {% for e in episodes %}
+                            <li class="fed-padding fed-col-xs3 fed-col-md2 fed-col-lg1">
+							<a class="fed-btns-info fed-rims-info fed-part-eone {% if episode.episodeMd5 == e.episodeMd5 %}fed-btns-green {% endif %}" href="/film/play/?name={{ episode.nameMd5 }}&episode={{ e.episodeMd5 }}">{{ e.episode }}</a>
+						</li>
+                        {% endfor %}
+                    </ul>
+				</div>
+							</div>
+		</div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

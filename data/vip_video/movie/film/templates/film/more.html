@@ -1,0 +1,109 @@
+{% extends 'film/base.html' %}
+{% block mainbody %}
+    <div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+
+<div class="fed-casc-info fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-casc-list fed-part-rows">
+		<dl>
+			<dt>频道</dt>
+                {% for key,value in dic_channel.items %}
+                    <dd><a {% if t_parent == key %}class="fed-this fed-text-green"{% endif %} href="/film/more/?t={{ key }}">{{ value }}</a></dd>
+                {% endfor %}
+        </dl>
+		<dl>
+			<dt>分类</dt>
+                {% if t_parent == '1' %}
+                    {% for key,value in dic_type_me.items %}
+                    <dd><a {% if t == key %}class="fed-this fed-text-green"{% endif %} href="/film/more/?t={{ key }}&re={{ re }}&ti={{ ti }}">{{ value }}</a></dd>
+                    {% endfor %}
+                {% elif t_parent == '2' %}
+                    {% for key,value in dic_type_tv.items %}
+                    <dd><a {% if t == key %}class="fed-this fed-text-green"{% endif %} href="/film/more/?t={{ key }}&re={{ re }}&ti={{ ti }}">{{ value }}</a></dd>
+                    {% endfor %}
+                {% elif t_parent == '3' %}
+                    {% for key,value in dic_type_am.items %}
+                    <dd><a {% if t == key %}class="fed-this fed-text-green"{% endif %} href="/film/more/?t={{ key }}&re={{ re }}&ti={{ ti }}">{{ value }}</a></dd>
+                    {% endfor %}
+                {% elif t_parent == '4' %}
+                    {% for key,value in dic_type_art.items %}
+                    <dd><a {% if t == key %}class="fed-this fed-text-green"{% endif %} href="/film/more/?t={{ key }}&re={{ re }}&ti={{ ti }}">{{ value }}</a></dd>
+                    {% endfor %}
+                {% endif %}
+        </dl>
+		<dl>
+			<dt>地区</dt>
+            {% for key,value in dic_region.items %}
+			    <dd><a {% if re == key %}class="fed-this fed-text-green" {% endif %}href="/film/more/?t={{ t }}&re={{ key }}&ti={{ ti }}">{{ value }}</a></dd>
+		    {% endfor %}
+        </dl>
+		<dl>
+			<dt>年代</dt>
+            {% for key,value in dic_time.items %}
+			    <dd><a {% if ti == key %} class="fed-this fed-text-green" {% endif %} href="/film/more/?t={{ t }}&re={{ re }}&ti={{ key }}">{{ value }}</a></dd>
+		    {% endfor %}
+        </dl>
+	</div>
+</div>
+<div class="fed-part-layout fed-back-whits">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">
+			<a href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&s=1" class="fed-text-bold fed-text-green">按时间</a>
+        	<a href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&s=2">按人气</a>
+        	<a href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&s=3">按评分</a>
+		</h2>
+		<ul class="fed-part-tips fed-padding">
+			<li><span class="fed-more"><span class="fed-hide-xs">当前第&nbsp;<span id="fed-now" class="fed-text-green fed-text-bold">{{ page.number }}</span>&nbsp;页，</span>共&nbsp;<span id="fed-count" class="fed-text-green fed-text-bold">{{ page.paginator.count }}</span>&nbsp;个影片</span></li>
+		</ul>
+	</div>
+	<ul class="fed-list-info fed-part-rows">
+        {% for m in page %}
+				<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+		<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+		</li>
+        {% endfor %}
+			</ul>
+	<div class="fed-page-info fed-text-center">
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page=1">首页</a>
+    {% if page.has_previous %}
+	    <a class="fed-btns-info fed-rims-info" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.previous_page_number }}">上页</a>
+        {% if page.number != 2 %}
+            <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page=1">1</a>
+        {% endif %}
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">上页</a>
+    {% endif %}
+    {% if page.number > 3 %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_previous %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.previous_page_number }}">{{ page.previous_page_number }}</a>
+    {% endif %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-green" href="javascript:;">{{ page.number }}</a>
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{{ page.number }}/{{ page.paginator.num_pages }}</a>
+    {% if page.has_next %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.next_page_number }}">{{ page.next_page_number }}</a>
+    {% endif %}
+    {% if page.number < page.paginator.num_pages|add:-2 %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_next %}
+        {% if page.number != page.paginator.num_pages|add:-1 %}
+            <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.paginator.num_pages }}">{{ page.paginator.num_pages }}</a>
+	    {% endif %}
+        <a class="fed-btns-info fed-rims-info" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.next_page_number }}">下页</a>
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">下页</a>
+    {% endif %}
+	<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page={{ page.paginator.num_pages }}">尾页</a>
+		<input class="fed-rims-info" id="page" type="text" placeholder="输入页码" autocomplete="off">
+    <a class="fed-btns-info fed-rims-info fed-page-jump" data-url="/film/more/?t={{ t }}&re={{ re }}&ti={{ ti }}&page=" data-total="{{ page.paginator.num_pages }}" data-sp="_" >跳转</a>
+</div>
+</div>
+</div></div>
+{% endblock %}

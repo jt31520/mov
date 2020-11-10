@@ -1,0 +1,52 @@
+{% extends 'xvideo/base.html' %}
+{% block mainbody %}
+<div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+<div class="fed-play-info fed-part-rows fed-back-whits fed-marg-top">
+{#	<div class="fed-play-player fed-rage-head fed-part-rows fed-back-black" style="padding-top:56.25%">#}
+    <div class="fed-play-player fed-rage-head fed-part-rows fed-back-black">
+{#		<style type="text/css">@media(max-width:47.9375rem){.fed-play-player{padding-top:56.25%!important}}</style>#}
+		<div id="fed-play-iframe" class="fed-play-iframe fed-part-full"></div>
+{#        <div id="player"></div>#}
+	</div>
+	<div class="fed-play-title fed-part-rows">
+        <ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+			<li class="fed-padding fed-col-xs12">
+				<span class="fed-play-text fed-visible fed-font-xvi fed-part-eone">{{ videos.name }}</span>
+			</li>
+        </ul>
+	</div>
+    <div class="fed-part-layout fed-back-whits">
+        <div class="fed-list-head fed-part-rows fed-padding">
+            <h2 class="fed-font-xvi">相关热播</h2>
+        </div>
+		<ul class="fed-list-info fed-part-rows">
+            {% for m in r_m %}
+                <li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+                    <a class="fed-list-pics fed-lazy fed-part-2by3" href="/xvideo/play/?id={{ m.id }}" data-original="{{ m.image }}"></a>
+                    <a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/xvideo/play/?id={{ m.id }}" >{{ m.name }}</a>
+		        </li>
+            {% endfor %}
+        </ul>
+	</div>
+</div>
+</div>
+</div>
+</div>
+    <link href="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://cdn.bootcss.com/dplayer/1.25.0/DPlayer.min.js"></script>
+    <script type="text/javascript">
+        var dplayer =  new DPlayer({
+            element: document.getElementById("fed-play-iframe"),
+            autoplay: true,
+            theme: '#FADFA3',
+            screenshot: true,
+            video: {
+                url: '{{ videos.episodeUrl }}',
+                pic: '',
+                type: 'auto'
+            }
+        });
+    </script>
+{% endblock %}

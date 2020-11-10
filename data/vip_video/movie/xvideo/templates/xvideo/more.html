@@ -1,0 +1,80 @@
+{% extends 'xvideo/base.html' %}
+{% block mainbody %}
+    <div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+
+<div class="fed-casc-info fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-casc-list fed-part-rows">
+		<dl>
+            <dt>分类</dt>
+            <dd><a {% if t == '1' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=1">自拍视频</a></dd>
+            <dd><a {% if t == '2' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=2">无码视频</a></dd>
+            <dd><a {% if t == '3' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=3">有码视频</a></dd>
+            <dd><a {% if t == '4' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=4">欧美视频</a></dd>
+            <dd><a {% if t == '5' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=5">动漫视频</a></dd>
+            <dd><a {% if t == '6' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=6">中文字幕</a></dd>
+            <dd><a {% if t == '7' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=7">一本道/东京热</a></dd>
+            <dd><a {% if t == '8' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=8">萝莉视频</a></dd>
+            <dd><a {% if t == '9' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=9">重口味</a></dd>
+            <dd><a {% if t == '10' %}class="fed-this fed-text-green"{% endif %} href="/xvideo/more/?t=10">其它极品</a></dd>
+        </dl>
+	</div>
+</div>
+<div class="fed-part-layout fed-back-whits">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">
+			<a href="/xvideo/more/?t={{ t }}&s=1" class="fed-text-bold fed-text-green">按时间</a>
+        	<a href="/xvideo/more/?t={{ t }}&s=2">按人气</a>
+        	<a href="/xvideo/more/?t={{ t }}&s=3">按评分</a>
+		</h2>
+		<ul class="fed-part-tips fed-padding">
+			<li><span class="fed-more"><span class="fed-hide-xs">当前第&nbsp;<span id="fed-now" class="fed-text-green fed-text-bold">{{ page.number }}</span>&nbsp;页，</span>共&nbsp;<span id="fed-count" class="fed-text-green fed-text-bold">{{ page.paginator.count }}</span>&nbsp;个影片</span></li>
+		</ul>
+	</div>
+	<ul class="fed-list-info fed-part-rows">
+        {% for m in page %}
+				<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+                    <a class="fed-list-pics fed-lazy fed-part-2by3" href="/xvideo/play/?id={{ m.id }}" data-original="{{ m.image }}" target="_blank"></a>
+                    <a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/xvideo/play/?id={{ m.id }}" target="_blank">{{ m.name }}</a>
+		</li>
+        {% endfor %}
+			</ul>
+	<div class="fed-page-info fed-text-center">
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/xvideo/more/?t={{ t }}&page=1">首页</a>
+    {% if page.has_previous %}
+	    <a class="fed-btns-info fed-rims-info" href="/xvideo/more/?t={{ t }}&page={{ page.previous_page_number }}">上页</a>
+        {% if page.number != 2 %}
+            <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/xvideo/more/?t={{ t }}&page=1">1</a>
+        {% endif %}
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">上页</a>
+    {% endif %}
+    {% if page.number > 3 %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_previous %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/xvideo/more/?t={{ t }}&page={{ page.previous_page_number }}">{{ page.previous_page_number }}</a>
+    {% endif %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-green" href="javascript:;">{{ page.number }}</a>
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="javascript:;">{{ page.number }}/{{ page.paginator.num_pages }}</a>
+    {% if page.has_next %}
+        <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/xvideo/more/?t={{ t }}&page={{ page.next_page_number }}">{{ page.next_page_number }}</a>
+    {% endif %}
+    {% if page.number < page.paginator.num_pages|add:-2 %}
+		<a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline fed-btns-disad" href="javascript:;">...</a>
+    {% endif %}
+    {% if page.has_next %}
+        {% if page.number != page.paginator.num_pages|add:-1 %}
+            <a class="fed-btns-info fed-rims-info fed-hide fed-show-sm-inline" href="/xvideo/more/?t={{ t }}&page={{ page.paginator.num_pages }}">{{ page.paginator.num_pages }}</a>
+	    {% endif %}
+        <a class="fed-btns-info fed-rims-info" href="/xvideo/more/?t={{ t }}&page={{ page.next_page_number }}">下页</a>
+    {% else %}
+        <a class="fed-btns-info fed-rims-info fed-btns-disad" href="avascript:;">下页</a>
+    {% endif %}
+	<a class="fed-btns-info fed-rims-info fed-hide fed-show-xs-inline" href="/xvideo/more/?t={{ t }}&page={{ page.paginator.num_pages }}">尾页</a>
+		<input class="fed-rims-info" id="page" type="text" placeholder="输入页码" autocomplete="off">
+    <a class="fed-btns-info fed-rims-info fed-page-jump" data-url="/xvideo/more/?t={{ t }}&page=" data-total="{{ page.paginator.num_pages }}" data-sp="_" >跳转</a>
+</div>
+</div>
+</div></div>
+{% endblock %}

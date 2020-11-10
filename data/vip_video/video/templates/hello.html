@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+    {% for d in list %}
+    <a class="icon1" href="/zhibo?url={{ d.value }}" target="_blank">{{ d.name }}</a>
+    {% endfor %}
+{% endblock %}
+

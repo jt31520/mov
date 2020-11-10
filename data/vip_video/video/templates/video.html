@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=“viewport” content=“width=device-width; initial-scale=1.0”>
+    <title>VIP视频观看</title>
+    <meta name="keywords" content="全网VIP视频">
+    <meta name="description" content="全网VIP视频免费观看">
+	<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            padding-top: 60px;
+        }
+
+        .w120 {
+            width: 120px;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" style="margin-top: -25px;" href="#">
+                    <h3>VIP视频网站解析</h3>
+                </a>
+            </div>
+			
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="input-group col-md-10 col-md-offset-1" style="padding:26px;">
+                <div class="input-group-btn">
+                    <button id=bturl type="button" class="w120 btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">VIP通道1&nbsp;&nbsp;
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="javascript:void(0);" value="https://api.sigujx.com/?url=">VIP通道1</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" value="https://vip.bljiex.com/?v=">VIP通道2</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="javascript:void(0);" value="http://app.baiduoos.cn:2019/vip/?url=">VIP通道3</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- /btn-group -->
+
+                <input id="txtURL" type="text" class="form-control" placeholder="复制视频的地址到这，点击播放">
+                <span class="input-group-btn">
+                    <button class="btn btn-success w120" type="button" id="btPlay">立即播放</button>
+                </span>
+            </div>
+            <!-- /input-group -->
+        </div>
+
+        <div class="col-md-10 col-md-offset-1">
+            <iframe id="playview" style="margin-top:10px;background:#000;"
+                width="100%" height="500px" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" src=""></iframe>
+        </div>
+
+        <div style="clear:both"></div>
+
+
+        <div class="col-md-10 col-md-offset-1" style="margin-top:30px;">
+            <p style="text-align: center;">本站支持全网视频网站VIP视频免费观看。本站视频源取自于互联网，仅供学习交流。
+            </p>
+        </div>
+
+        <div style="clear:both"></div>
+
+    </div>
+
+    <script>
+        var selecturl = "https://api.sigujx.com/?url=";
+
+        $("#btPlay").click(
+            function () {
+                
+                if($("#txtURL").val()=="")
+                {
+                    alert("请输入视频地址！")
+                    $("#txtURL").focus();
+                    return;
+                }
+                var url = selecturl + $("#txtURL").val();
+                $("#playview").attr("src", url);
+
+            }
+        )
+
+        $(".dropdown-menu a").click(
+            function () {
+                selecturl = $(this).attr("value");
+                $("#bturl").html($(this).html() + '&nbsp;&nbsp;<span class=\"caret\"></span>');
+            }
+        )
+
+    </script>
+	
+</body>
+
+</html>

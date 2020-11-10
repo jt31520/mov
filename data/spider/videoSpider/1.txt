@@ -1,0 +1,450 @@
+nohup: ignoring input
+2020-01-14 14:15:26 [scrapy.utils.log] INFO: Scrapy 1.7.3 started (bot: videoSpider)
+2020-01-14 14:15:26 [scrapy.utils.log] INFO: Versions: lxml 4.3.2.0, libxml2 2.9.9, cssselect 1.1.0, parsel 1.5.2, w3lib 1.21.0, Twisted 19.7.0, Python 3.7.3 (default, Mar 27 2019, 22:11:17) - [GCC 7.3.0], pyOpenSSL 19.0.0 (OpenSSL 1.1.1b  26 Feb 2019), cryptography 2.6.1, Platform Linux-3.10.0-957.21.3.el7.x86_64-x86_64-with-centos-7.4.1708-Core
+2020-01-14 14:15:26 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'videoSpider', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'videoSpider.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['videoSpider.spiders']}
+2020-01-14 14:15:26 [scrapy.extensions.telnet] INFO: Telnet Password: 5598db0da5290e27
+2020-01-14 14:15:26 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2020-01-14 14:15:26 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-01-14 14:15:26 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-01-14 14:15:26 [scrapy.middleware] INFO: Enabled item pipelines:
+['videoSpider.pipelines.VideospiderPipeline']
+2020-01-14 14:15:26 [scrapy.core.engine] INFO: Spider opened
+2020-01-14 14:15:26 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-01-14 14:15:26 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319290.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/308999.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319335.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319338.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319257.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313110.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313149.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315761.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315763.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315764.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315766.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315767.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315771.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315775.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315777.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319291.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/312208.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319283.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319273.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/296644.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315778.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315779.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313477.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313583.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313184.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313585.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313173.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313576.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/303637.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313313.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/310476.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/313590.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319266.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319258.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319263.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319256.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319247.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/319200.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/311171.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/296328.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315252.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/268739.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/296744.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/296747.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/311176.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/315220.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/294230.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/278445.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/300922.html
+2020-01-14 14:15:29 [video] INFO: 爬取的url:/detail/283074.html
+2020-01-14 14:15:30 [video] INFO: 养杀人鬼的女人 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 抖音美女萌妹 38的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 抖音美女萌妹 38 不在video_detail详情表
+2020-01-14 14:15:30 [video] INFO: 抖音美女萌妹 38 已写入video_detail详情表
+2020-01-14 14:15:30 [video] INFO: 女子学校拷问部的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 女子学校拷问部 不在video_detail详情表
+2020-01-14 14:15:30 [video] INFO: 女子学校拷问部 已写入video_detail详情表
+2020-01-14 14:15:30 [video] INFO: 通灵妃真人版 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 通灵妃真人版 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 通灵妃真人版 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 通灵妃真人版 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:30 [video] INFO: 通灵妃真人版 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第1集集已写入video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 不在video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已写入video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 通灵妃真人版 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第2集集已写入video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:31 [video] INFO: 钱信伊 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 通灵妃真人版 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第3集集已写入video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:31 [video] INFO: 通灵妃真人版 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第4集集已写入video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:31 [video] INFO: 通灵妃真人版 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第5集集已写入video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:31 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:31 [video] INFO: 通灵妃真人版 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:31 [video] INFO: 最后的较量的第第6集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:32 [video] INFO: 通灵妃真人版 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量的第第7集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:32 [video] INFO: 通灵妃真人版 的 第12集 已存在video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量的第第8集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:32 [video] INFO: 通灵妃真人版 的 第13集 已存在video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量的第第9集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:32 [video] INFO: 通灵妃真人版 的 第14集 已存在video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量的第第10集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:32 [video] INFO: 通灵妃真人版 的 第15集 已存在video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量的第第11集集已写入video_episode集数表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:32 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第16集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量的第第12集集已写入video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第17集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量的第第13集集已写入video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第18集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量的第第14集集已写入video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第19集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量的第第15集集已写入video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第20集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 首席爱人第一季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量的第第16集集已写入video_episode集数表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:33 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:33 [video] INFO: 通灵妃真人版 的 第21集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 首席爱人第一季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 那年那兔那些事儿第五季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量的第第17集集已写入video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:34 [video] INFO: 通灵妃真人版 的 第22集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 首席爱人第一季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 那年那兔那些事儿第五季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量的第第18集集已写入video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:34 [video] INFO: 通灵妃真人版 的 第23集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 首席爱人第一季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 那年那兔那些事儿第五季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量的第第19集集已写入video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:34 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:34 [video] INFO: 通灵妃真人版 的 第24集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 首席爱人第一季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:34 [video] INFO: 世说新语第二季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 那年那兔那些事儿第五季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 魔王新娘太难了第一季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量的第第20集集已写入video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:35 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:35 [video] INFO: 通灵妃真人版 的 第25集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 首席爱人第一季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 世说新语第二季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 闻香识妻第一季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 那年那兔那些事儿第五季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 魔王新娘太难了第一季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 葛丽泰 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量的第第21集集已写入video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:35 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:35 [video] INFO: 通灵妃真人版 的 第26集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 首席爱人第一季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 世说新语第二季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 闻香识妻第一季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 那年那兔那些事儿第五季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 魔王新娘太难了第一季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量的第第22集集已写入video_episode集数表
+2020-01-14 14:15:35 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:36 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:36 [video] INFO: 通灵妃真人版 的 第27集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 首席爱人第一季 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 娇女毒妃第二季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 重生丫头狠狠爱 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 闻香识妻第一季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 那年那兔那些事儿第五季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 魔王新娘太难了第一季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 最后的较量的第第23集集已写入video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:36 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:36 [video] INFO: 通灵妃真人版 的 第28集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 首席爱人第一季 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 娇女毒妃第二季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 重生丫头狠狠爱 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 闺蜜跟我抢老公第一季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 成群结伴！西顿学园 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 契约少女管家 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 闻香识妻第一季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:36 [video] INFO: 那年那兔那些事儿第五季 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 魔王新娘太难了第一季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 最后的较量的第第24集集已写入video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:37 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:37 [video] INFO: 通灵妃真人版 的 第29集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 首席爱人第一季 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 三生有幸 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 花落一梦第二季 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 栋笃神探 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 娇女毒妃第二季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 巴比伦 的 第1集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 重生丫头狠狠爱 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 闺蜜跟我抢老公第一季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 成群结伴！西顿学园 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 契约少女管家 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 闻香识妻第一季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 最后的较量的第第25集集已写入video_episode集数表
+2020-01-14 14:15:37 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:37 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:37 [video] INFO: 通灵妃真人版 的 第30集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 首席爱人第一季 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 花落一梦第二季 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 栋笃神探 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 娇女毒妃第二季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 巴比伦 的 第2集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 毒战生死线2 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 重生丫头狠狠爱 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 闺蜜跟我抢老公第一季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 契约少女管家 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 闻香识妻第一季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 最后的较量的第第26集集已写入video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:38 [video] INFO: 通灵妃真人版 的 第31集 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 妻子的妹妹的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 妻子的妹妹 不在video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 妻子的妹妹 已写入video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 旁观者的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 旁观者 不在video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 旁观者 已写入video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 禁室培欲之爱的俘虏的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 禁室培欲之爱的俘虏 不在video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 禁室培欲之爱的俘虏 已写入video_detail详情表
+2020-01-14 14:15:38 [video] INFO: 曼哈顿工程 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:38 [video] INFO: 姬姥的青春期 的 HD高清 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 花落一梦第二季 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 栋笃神探 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 娇女毒妃第二季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 巴比伦 的 第3集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 重生丫头狠狠爱 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 闺蜜跟我抢老公第一季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 契约少女管家 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 闻香识妻第一季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 最后的较量的第第27集集已写入video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:39 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:39 [video] INFO: 通灵妃真人版 的 第32集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 花落一梦第二季 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 猛鬼佳人的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 猛鬼佳人 不在video_detail详情表
+2020-01-14 14:15:39 [video] INFO: 猛鬼佳人 已写入video_detail详情表
+2020-01-14 14:15:39 [video] INFO: 她来自胡志明市的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 她来自胡志明市 不在video_detail详情表
+2020-01-14 14:15:39 [video] INFO: 她来自胡志明市 已写入video_detail详情表
+2020-01-14 14:15:39 [video] INFO: 栋笃神探 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 娇女毒妃第二季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 巴比伦 的 第4集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 重生丫头狠狠爱 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 闺蜜跟我抢老公第一季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:39 [video] INFO: 契约少女管家 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 闻香识妻第一季 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 最后的较量的第第28集集已写入video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 最后的较量 已存在video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 最后的较量 已在video_detail详情表更新 更新的值为('完结', '2020-01-14 14:14:29', '国产剧', 'e9ba1a53fb6511c2e8677691651b75eb')
+2020-01-14 14:15:40 [video] INFO: 通灵妃真人版的第第33集集已写入video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 通灵妃真人版 已存在video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 通灵妃真人版 已在video_detail详情表更新 更新的值为('更新至34集', '2020-01-14 14:11:43', '国产剧', '0b7c76e1367ca1fdf11577451b956ca6')
+2020-01-14 14:15:40 [video] INFO: 小李广花荣的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 小李广花荣 不在video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 小李广花荣 已写入video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 金牌调解2020 的 第200101期 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 小小的追球 的 第191126期 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 抖音美女萌妹 31的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 抖音美女萌妹 31 不在video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 抖音美女萌妹 31 已写入video_detail详情表
+2020-01-14 14:15:40 [video] INFO: 花落一梦第二季 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 栋笃神探 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 娇女毒妃第二季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 巴比伦 的 第5集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 重生丫头狠狠爱 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 闺蜜跟我抢老公第一季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 契约少女管家 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 闻香识妻第一季 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 通灵妃真人版的第第34集集已写入video_episode集数表
+2020-01-14 14:15:40 [video] INFO: 通灵妃真人版 已存在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 通灵妃真人版 已在video_detail详情表更新 更新的值为('更新至34集', '2020-01-14 14:11:43', '国产剧', '0b7c76e1367ca1fdf11577451b956ca6')
+2020-01-14 14:15:41 [video] INFO: 金牌调解2020 的 第200102期 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 小小的追球 的 第191203期 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 花落一梦第二季 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 最佳出价的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 最佳出价 不在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 最佳出价 已写入video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 32的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 32 不在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 32 已写入video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 栋笃神探 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 娇女毒妃第二季 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 巴比伦 的 第6集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 重生丫头狠狠爱 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 闺蜜跟我抢老公第一季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 契约少女管家 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 闻香识妻第一季 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 34的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 34 不在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 34 已写入video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 36的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 36 不在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 36 已写入video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 33的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 33 不在video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 抖音美女萌妹 33 已写入video_detail详情表
+2020-01-14 14:15:41 [video] INFO: 不许抢劫的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 不许抢劫 不在video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 不许抢劫 已写入video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 金牌调解2020 的 第200103期 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 小小的追球 的 第191210期 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 花落一梦第二季 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 栋笃神探 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 娇女毒妃第二季 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 巴比伦 的 第7集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 重生丫头狠狠爱 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 契约少女管家 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 闻香识妻第一季 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 金牌调解2020 的 第200104期 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 37的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 37 不在video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 37 已写入video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 小小的追球 的 第191217期 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 35的第HD高清集已写入video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 35 不在video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 抖音美女萌妹 35 已写入video_detail详情表
+2020-01-14 14:15:42 [video] INFO: 花落一梦第二季 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 栋笃神探 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 娇女毒妃第二季 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 巴比伦 的 第8集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 重生丫头狠狠爱 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:42 [video] INFO: 契约少女管家 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 闻香识妻第一季 的 第12集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 金牌调解2020 的 第200105期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 小小的追球 的 第191224期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 花落一梦第二季 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 栋笃神探 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 娇女毒妃第二季 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 巴比伦 的 第9集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 契约少女管家 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 闻香识妻第一季 的 第13集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 金牌调解2020 的 第200106期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 小小的追球 的 第191231期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 栋笃神探 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 巴比伦 的 第10集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 契约少女管家 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 闻香识妻第一季 的 第14集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 金牌调解2020 的 第200107期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 小小的追球 的 第200107期 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 栋笃神探 的 第11集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 契约少女管家 的 第12集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 闻香识妻第一季 的 第15集 已存在video_episode集数表
+2020-01-14 14:15:43 [video] INFO: 金牌调解2020 的 第200108期 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 小小的追球的第第200114期集已写入video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 小小的追球 已存在video_detail详情表
+2020-01-14 14:15:44 [video] INFO: 小小的追球 已在video_detail详情表更新 更新的值为('更新至200114期', '2020-01-14 12:58:37', '内地综艺', '4f0ceb229141a0f80cbce9ee1e7dcd33')
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第12集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 契约少女管家 的 第13集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 闻香识妻第一季 的 第16集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 的 第200109期 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第13集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 闻香识妻第一季 的 第17集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 的 第200110期 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第14集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 闻香识妻第一季 的 第18集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 的 第200111期 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第15集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 的 第200112期 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第16集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020的第第200113期集已写入video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 已存在video_detail详情表
+2020-01-14 14:15:44 [video] INFO: 金牌调解2020 已在video_detail详情表更新 更新的值为('更新至200113期', '2020-01-14 13:02:02', '内地综艺', 'f40b2a865201c72069fe08752abcc216')
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第17集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第18集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第19集 已存在video_episode集数表
+2020-01-14 14:15:44 [video] INFO: 栋笃神探 的 第20集 已存在video_episode集数表
+2020-01-14 14:15:45 [video] INFO: 栋笃神探 的 第21集 已存在video_episode集数表
+2020-01-14 14:15:45 [video] INFO: 栋笃神探 的 第22集 已存在video_episode集数表
+2020-01-14 14:15:45 [video] INFO: 栋笃神探 的 第23集 已存在video_episode集数表
+2020-01-14 14:15:45 [video] INFO: 栋笃神探 的 第24集 已存在video_episode集数表
+2020-01-14 14:15:45 [video] INFO: 栋笃神探 的 第25集 已存在video_episode集数表
+2020-01-14 14:15:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-01-14 14:15:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 19490,
+ 'downloader/request_count': 63,
+ 'downloader/request_method_count/GET': 63,
+ 'downloader/response_bytes': 433301,
+ 'downloader/response_count': 63,
+ 'downloader/response_status_count/200': 43,
+ 'downloader/response_status_count/301': 2,
+ 'downloader/response_status_count/302': 18,
+ 'dupefilter/filtered': 9,
+ 'elapsed_time_seconds': 19.023811,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 1, 14, 6, 15, 45, 231516),
+ 'item_scraped_count': 239,
+ 'log_count/INFO': 397,
+ 'memusage/max': 47067136,
+ 'memusage/startup': 47067136,
+ 'request_depth_max': 1,
+ 'response_received_count': 43,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 61,
+ 'scheduler/dequeued/memory': 61,
+ 'scheduler/enqueued': 61,
+ 'scheduler/enqueued/memory': 61,
+ 'start_time': datetime.datetime(2020, 1, 14, 6, 15, 26, 207705)}
+2020-01-14 14:15:45 [scrapy.core.engine] INFO: Spider closed (finished)

@@ -1,0 +1,142 @@
+
+{% extends 'film/base.html' %}
+
+{% block mainbody %}
+    <div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+<div class="fed-swip-container fed-part-rows">
+	<ul class="fed-swip-wrapper fed-font-size">
+			</ul>
+	<div class="fed-swip-pagin fed-font-size fed-text-right"></div>
+	<a class="fed-swip-next fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-you" href="javascript:;"></a>
+	<a class="fed-swip-prev fed-text-white fed-text-center fed-hide-xs fed-icon-font fed-icon-zuo" href="javascript:;"></a>
+</div>
+<div class="fed-part-layout fed-back-whits">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">最新视频</h2>
+	</div>
+	<ul class="fed-list-info fed-part-rows">
+        {% for m in newest %}
+				<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+		<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+		</li>
+        {% endfor %}
+			</ul>
+</div>
+<div class="fed-list-home fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">电影</h2>
+		<ul class="fed-part-tips fed-padding">
+						<li class="fed-hide-xs"><a href="/film/more/?t=5">动作片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=6">喜剧片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=7">爱情片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=8">科幻片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=10">恐怖片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=9">剧情片</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=11">战争片</a> /</li>
+                        <li class="fed-hide-xs"><a href="/film/more/?t=13">伦理片</a> /</li>
+						<li><a class="fed-more" href="/film/more/?t=1">更多</a></li>
+		</ul>
+	</div>
+		<div class="fed-part-rows">
+				<ul class="fed-list-info fed-part-rows">
+                    {% for m in movies %}
+						<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+			<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+			</li>
+                    {% endfor %}
+					</ul>
+			</div>
+	</div>
+<div class="fed-list-home fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">连续剧</h2>
+		<ul class="fed-part-tips fed-padding">
+						<li class="fed-hide-xs"><a href="/film/more/?t=14">国产剧</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=15">香港剧</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=16">韩国剧</a> /</li>
+                        <li class="fed-hide-xs"><a href="/film/more/?t=19">日本剧</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=17">欧美剧</a> /</li>
+						<li><a class="fed-more" href="/film/more/?t=2">更多</a></li>
+		</ul>
+	</div>
+		<div class="fed-part-rows">
+				<ul class="fed-list-info fed-part-rows">
+                    {% for m in tvs %}
+						<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+			<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+			</li>
+                    {% endfor %}
+					</ul>
+			</div>
+	</div>
+<div class="fed-list-home fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">综艺</h2>
+		<ul class="fed-part-tips fed-padding">
+                        <li class="fed-hide-xs"><a href="/film/more/?t=21">内地综艺</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=22">港台综艺</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=23">日韩综艺</a> /</li>
+                        <li class="fed-hide-xs"><a href="/film/more/?t=24">欧美综艺</a> /</li>
+						<li><a class="fed-more" href="/film/more/?t=4">更多</a></li>
+		</ul>
+	</div>
+		<div class="fed-part-rows">
+				<ul class="fed-list-info fed-part-rows">
+                    {% for m in arts %}
+						<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+			<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+			</li>
+                    {% endfor %}
+					</ul>
+			</div>
+	</div>
+<div class="fed-list-home fed-part-layout fed-back-whits fed-part-rows">
+	<div class="fed-list-head fed-part-rows fed-padding">
+		<h2 class="fed-font-xvi">动漫</h2>
+		<ul class="fed-part-tips fed-padding">
+                        <li class="fed-hide-xs"><a href="/film/more/?t=25">国产动漫</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=26">日韩动漫</a> /</li>
+						<li class="fed-hide-xs"><a href="/film/more/?t=27">港台动漫</a> /</li>
+                        <li class="fed-hide-xs"><a href="/film/more/?t=28">欧美动漫</a> /</li>
+						<li><a class="fed-more" href="/film/more/?t=3">更多</a></li>
+		</ul>
+	</div>
+		<div class="fed-part-rows">
+				<ul class="fed-list-info fed-part-rows">
+                    {% for m in animations %}
+						<li class="fed-list-item fed-padding fed-col-xs4 fed-col-sm3 fed-col-md2">
+			<a class="fed-list-pics fed-lazy fed-part-2by3" href="/film/detail/?name={{ m.nameMd5 }}" data-original="{{ m.image }}">
+	<span class="fed-list-play fed-hide-xs"></span>
+		<span class="fed-list-score fed-font-xii fed-back-green">{{ m.score }}</span>
+		<span class="fed-list-remarks fed-font-xii fed-text-white fed-text-center">{{ m.updateTo }}</span>
+</a>
+<a class="fed-list-title fed-font-xiv fed-text-center fed-text-sm-left fed-visible fed-part-eone" href="/film/detail/?name={{ m.nameMd5 }}" >{{ m.name }}</a>
+			</li>
+                    {% endfor %}
+					</ul>
+			</div>
+	</div>
+</div>
+    </div>
+{% endblock %}

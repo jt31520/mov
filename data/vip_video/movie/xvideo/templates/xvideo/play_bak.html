@@ -1,0 +1,57 @@
+{% extends 'xvideo/base.html' %}
+{% block mainbody %}
+<div class="fed-main-info fed-min-width">
+<div class="fed-part-case">
+<div class="fed-play-info fed-part-rows fed-back-whits fed-marg-top">
+	<div class="fed-play-player fed-rage-head fed-part-rows fed-back-black" style="padding-top:56.25%">
+		<style type="text/css">@media(max-width:47.9375rem){.fed-play-player{padding-top:56.25%!important}}</style>
+		<div id="fed-play-iframe" class="fed-play-iframe fed-part-full"></div>
+	</div>
+	<div class="fed-play-title fed-part-rows">
+        <ul class="fed-play-boxs fed-padding fed-part-rows fed-col-xs12 fed-col-md6">
+			<li class="fed-padding fed-col-xs12">
+				<span class="fed-play-text fed-visible fed-font-xvi fed-part-eone">{{ videos.name }}</span>
+			</li>
+        </ul>
+	</div>
+</div>
+</div>
+</div>
+</div>
+    <script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.3.2.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var player =  new TcPlayer('fed-play-iframe', {
+    "m3u8": "{{ videos.episodeUrl }}",
+    "autoplay" : true,
+    });
+
+    document.onkeyup = function(event){
+		var e = event || window.event;
+		//快进
+		if(e && e.keyCode === 39){
+			player.currentTime(player.currentTime()+5);
+			return false;
+		}
+		//快退
+		else if(e && e.keyCode === 37){
+			player.currentTime(player.currentTime()-5);
+			return false;
+		}
+		//音量加
+		else if(e && e.keyCode === 38){
+			player.volume(player.volume()+0.1);
+			return false;
+		}
+		//音量减
+		else if(e && e.keyCode === 40){
+			player.volume(player.volume()-0.1);
+			return false;
+		}
+		//空格暂停 播放
+		else if(e && e.keyCode === 32){
+			player.togglePlay();
+			return false;
+		}
+	};
+</script>
+{% endblock %}

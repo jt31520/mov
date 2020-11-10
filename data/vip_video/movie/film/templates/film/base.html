@@ -1,0 +1,187 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="renderer" content="webkit" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-title" content="xx影视" />
+<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/rss.xml" />
+<link href="{% static 'asset/images/logo.png' %}" rel="apple-touch-icon-precomposed" />
+<link href="{% static 'asset/images/logo.png' %}" rel="shortcut icon" type="image/ico" />
+<link rel="stylesheet" type="text/css" href="{% static 'asset/css/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'asset/css/blues.css' %}" id="fed-colo-color" />
+<title></title>
+<meta name="keywords" content="xx影视" />
+<meta name="description" content="高清影院 首播影院" />
+<meta itemprop="url" property="og:url" content="https://www.xx.com/" />
+<meta itemprop="name" property="og:title" content="xx影视" />
+<meta itemprop="image" property="og:image" content="https:xx.png" />
+<meta itemprop="description" property="og:description" content="💚高清影院❤️首播影院" />
+</head>
+<body class="fed-min-width">
+<div class="fed-head-info fed-back-whits fed-min-width fed-box-shadow">
+	<div class="fed-part-case">
+		<div class="fed-navs-info">
+			<ul class="fed-menu-info">
+				<li class="fed-pull-left">
+					<a class="fed-menu-logo fed-show-kind" href="/"><img width="96" height="40" alt="xx影视" src="{% static 'asset/images/logo.png' %}" /></a>
+				</li>
+				<li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-text-green fed-hide fed-show-md-block" href="/">首页</a>
+				</li>
+                <li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-md-block" href="/film/more/?t=1">电影</a>
+				</li>
+                <li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-lg-block" href="/film/more/?t=2">连续剧</a>
+				</li>
+                <li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-lg-block" href="/film/more/?t=4">综艺</a>
+				</li>
+                <li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-lg-block" href="/film/more/?t=3">动漫</a>
+				</li>
+                <li class="fed-pull-left">
+					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-hide fed-show-md-block" href="/film/jiexi/?url=" target="_blank">视频解析</a>
+				</li>
+{#                <li class="fed-pull-left">#}
+{#					<a class="fed-menu-title fed-show-kind fed-font-xvi fed-navs-navbar fed-event fed-hide fed-show-sm-block" href="javascript:;">导航<span class="fed-part-move fed-edge-info fed-edge-bottom"></span></a>#}
+{#				</li>#}
+			</ul>
+			<div class="fed-navs-search fed-back-whits fed-hidden fed-conceal fed-show-sm-block">
+{#				<a class="fed-navs-close fed-conceal fed-hide-sm" href="javascript:;">取消</a>#}
+				<form class="fed-navs-form" method="post" action="/film/search/">
+{#                    <div class="fed-navs-cuts fed-event">#}
+{#						<a class="fed-navs-btns" href="javascript:;">#}
+{#                            <span class="fed-navs-name" data-type="1" data-href="/vodsearch/-------------.html">视频</span>#}
+{#                            <span class="fed-part-move fed-edge-info fed-edge-bottom"></span>#}
+{#                        </a>#}
+{#					</div>#}
+					<input class="fed-navs-input fed-back-ashen fed-event" name="searchword" type="search" placeholder="请输入关键字" />
+                    <button class="fed-navs-submit fed-back-ashen" type="submit"><i class="fed-icon-font fed-icon-sousuo"></i></button>
+                    {% csrf_token %}
+                </form>
+			</div>
+			<div class="fed-navs-right">
+{#				<a class="fed-navs-route fed-text-black fed-event fed-hidden fed-hide-sm" href="javascript:;"></a>#}
+                <div class="fed-navs-search fed-back-whits fed-hidden fed-conceal fed-show-xs-block">
+{#				<a class="fed-navs-close fed-conceal fed-hide-sm" href="javascript:;" style="display: block">取消</a>#}
+				<form class="fed-navs-form" method="post" action="/film/search/">
+{#                    <div class="fed-navs-cuts fed-event">#}
+{#						<a class="fed-navs-btns" href="javascript:;">#}
+{#                            <span class="fed-navs-name" data-type="1" data-href="">视频</span>#}
+{#                            <span class="fed-part-move fed-edge-info fed-edge-bottom"></span>#}
+{#                        </a>#}
+{#					</div>#}
+					<input class="fed-navs-input fed-back-ashen fed-event" name="searchword" type="search" placeholder="请输入关键字" />
+                    <button class="fed-navs-submit fed-back-ashen" type="submit"><i class="fed-icon-font fed-icon-sousuo"></i></button>
+                    {% csrf_token %}
+                </form>
+			</div>
+                <a class="fed-navs-button fed-text-black fed-event fed-hide-sm fed-icon-font fed-icon-sousuo" href="javascript:;"></a>
+{#                <a class="fed-navs-record fed-text-black fed-event fed-hide-xs fed-show-sm-block mac_history" href="javascript:;">看过<span class="fed-part-move fed-edge-info fed-edge-bottom"></span></a>#}
+{#                <a class="fed-navs-login fed-text-black fed-hide-xs fed-show-sm-block" href="javascript:;">登录</a>#}
+{#                <a class="fed-navs-record fed-text-black fed-event fed-hide-sm fed-icon-font fed-icon-lishi" href="javascript:;"></a>#}
+            </div>
+		</div>
+		<div class="fed-pops-navbar fed-box-shadow fed-min-width fed-hidden fed-conceal fed-anim">
+{#			<div class="fed-pops-channel fed-back-whits fed-part-rows fed-line-top fed-hidden">选择频道</div>#}
+{#			<a class="fed-pops-btns fed-back-whits fed-text-black fed-text-center fed-event fed-hide-sm fed-icon-font fed-icon-fenlei" href="javascript:;"></a>#}
+			<ul class="fed-pops-list fed-font-size fed-back-whits fed-part-rows">
+				<li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/">首页</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/more/?t=1">电影</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/more/?t=2">连续剧</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/more/?t=4">综艺</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/more/?t=13">伦理片</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/more/?t=3">动漫</a>
+				</li>
+                <li class="fed-col-sm2">
+					<a class="fed-part-eone" href="/film/jiexi/?url=">视频解析</a>
+				</li>
+							</ul>
+		</div>
+		<div class="fed-pops-search fed-hidden fed-conceal fed-anim fed-anim-upbit">
+			<div class="fed-pops-case fed-line-top fed-back-ashen fed-box-shadow">
+				<div class="fed-pops-key"></div>
+				<div class="fed-pops-box">
+					<div class="fed-pops-hot">
+						<div class="fed-pops-title fed-back-whits fed-part-rows fed-line-bottom">热门搜索</div>
+						<ul class="fed-pops-list fed-back-whits fed-part-rows">
+                            <li class="fed-col-xs6">
+								<a class="fed-event fed-part-eone" href="/vodsearch/%E5%8F%98%E5%BD%A2%E9%87%91%E5%88%9A-------------.html"><span class="fed-part-nums fed-part-num1">1</span><span class="fed-name">变形金刚</span></a>
+							</li>
+													</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+{#		<div class="fed-pops-record fed-box-shadow fed-hidden fed-conceal fed-anim fed-anim-upbit">#}
+{#			<div class="fed-pops-title fed-back-whits fed-line-top fed-line-bottom fed-part-rows"><span class="fed-col-xs9">观看记录</span>#}
+{#				<a class="fed-clear fed-event fed-text-right fed-col-xs3" href="javascript:;">清空</a>#}
+{#			</div>#}
+{#			<ul class="fed-pops-list fed-back-whits"></ul>#}
+{#		</div>#}
+{#		<div class="fed-pops-cuts fed-line-top fed-hidden fed-conceal fed-anim fed-anim-upbit">#}
+{#			<ul class="fed-part-rows fed-box-shadow fed-back-whits fed-padding">#}
+{#				<li data-type="1" data-href="/vodsearch/-------------.html" class="fed-padding fed-part-curs fed-text-center fed-event fed-text-green">视频</li>#}
+{#							</ul>#}
+{#		</div>#}
+{#        <div class="fed-pops-user fed-box-shadow fed-back-whits fed-hidden fed-conceal fed-anim fed-anim-upbit">#}
+{#			<ul class="fed-pops-list fed-font-size fed-back-whits">#}
+{#				<li>#}
+{#					<a href="/user/index.html">游客</a>#}
+{#				</li>#}
+{#				<li>#}
+{#					<a href="/user/info.html">修改资料</a>#}
+{#				</li>#}
+{#			</ul>#}
+{#		</div>#}
+	</div>
+</div>
+    {% block mainbody %}
+       <p>original</p>
+    {% endblock %}
+{#<script type="text/javascript"> var vfed = { 'path': '/', 'tips': '', 'ver': '', 'tpl': '/static/', 'mid': '', 'aid': '1', 'did': '', 'sid': '', 'nid': '', 'wap': 'com', 'mob': '2', 'not': '1' }; </script>#}
+
+<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+<script src="{% static 'asset/js/global.js' %}" type="text/javascript" charset="utf-8"></script>
+<div class="fed-foot-info fed-part-layout fed-back-whits">
+	<div class="fed-part-case">
+		<p class="fed-text-center fed-text-black"></p>
+{#		<p class="fed-text-center fed-text-black"><div style="display:none"><script type="text/javascript" src="//js.users.51.la/20407779.js"></script></div></p>#}
+		<p class="fed-text-center fed-text-black fed-foot-maps fed-font-size" style="display:none">
+			<a class="fed-font-xiv" href="/rss.xml" target="_blank">RSS订阅</a>
+			<span class="fed-font-xiv">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv" href="/rss/baidu.xml" target="_blank">百度蜘蛛</a>
+			<span class="fed-font-xiv">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv" href="/rss/google.xml" target="_blank">谷歌地图</a>
+			<span class="fed-font-xiv">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv" href="/rss/sm.xml" target="_blank">神马爬虫</a>
+			<span class="fed-font-xiv fed-hide-xs">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv fed-hide-xs" href="/rss/sogou.xml" target="_blank">搜狗蜘蛛</a>
+			<span class="fed-font-xiv fed-hide-xs">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv fed-hide-xs" href="/rss/so.xml" target="_blank">奇虎地图</a>
+			<span class="fed-font-xiv fed-hide-xs">&nbsp;-&nbsp;</span>
+			<a class="fed-font-xiv fed-hide-xs" href="/rss/bing.xml" target="_blank">必应爬虫</a>
+		</p>
+				<p class="fed-text-center fed-text-black">&copy;&nbsp;2019&nbsp;www.xxx.com&nbsp;&nbsp;<a class="fed-font-xiv" href="" target="_blank">xx影视</a></p>
+	</div>
+</div>
+</body>
+</html>
